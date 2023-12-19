@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Pet Adoption Portal</title>
+    <style>
+    
+        header {
+            background-color: #00e4c9;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            padding-bottom: 200px; 
+            background: url('https://static.vecteezy.com/system/resources/previews/015/449/992/original/adopt-a-pet-from-an-animal-shelter-in-the-form-of-cats-or-dogs-to-care-for-and-look-after-in-flat-cartoon-hand-drawn-templates-illustration-vector.jpg') no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            background-position: center 50px;
+        }
+         
+        .results-present {
+            background-image: none; 
+        }
+
+
+        main {
+            flex: 1;
+        }
+
+       
+        footer {
+            position: absolute; 
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        #search-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        #search-bar {
+            min-width: 200px; 
+        }
+
+        #pet-listings {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pet-item {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        .pet-item img {
+            width: 200px; 
+            height: 200px; 
+            object-fit: cover; 
+            display: block;
+            margin: 0 auto;
+        }
+
+        input[type="text"], select, input[type="number"] {
+            font-size: 13px; 
+            padding: 10px; 
+            height: 50px; 
+        }
+ 
+        button {
+            font-size: 16px; 
+            padding: 10px 20px;
+            height: 50px; 
+            cursor: pointer; 
+        }
+
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Pet Adoption Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <input type="text" id="search-bar" placeholder="Enter location (e.g., ZIP code)">
+            <select id="animal-type">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+               
+            </select>
+            <input type="number" id="distance" placeholder="Distance (miles)">
+            <button id="search-button">Search</button>
+        </section>
+
+        <section id="pet-listings">
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Pet Adoption Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
