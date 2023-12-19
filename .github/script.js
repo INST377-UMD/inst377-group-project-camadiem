@@ -1,6 +1,6 @@
 const apiKey = 'nPFzxugQHzw2hkfe4yb3oYoSKvCU88Hl3IJtCqJhZ6L61GtDci';
 
-// Function to handle the search button click
+// Function for the search button click
 document.getElementById('search-button').addEventListener('click', function() {
     const location = document.getElementById('search-bar').value;
     const animalType = document.getElementById('animal-type').value;
@@ -10,8 +10,8 @@ document.getElementById('search-button').addEventListener('click', function() {
 });
 
 // Function to search for pets
-function searchPets(location, animalType, distance) {
-    // Constructing the API URL with query parameters
+    function searchPets(location, animalType, distance) {
+    
     const apiUrl = `https://api.petfinder.com/v2/animals?type=${animalType}&location=${location}&distance=${distance}`;
 
     // Fetch token from Petfinder API
@@ -44,16 +44,18 @@ function searchPets(location, animalType, distance) {
 function displayPets(pets) {
     const bodyElement = document.body;
     const listings = document.getElementById('pet-listings');
+    const adoptMeText = document.getElementById('adopt-me-text');
     listings.innerHTML = '';
 
     if (pets.length > 0) {
         
         bodyElement.classList.add('results-present');
+        adoptMeText.style.display = 'none'; 
     } else {
        
         bodyElement.classList.remove('results-present');
+        adoptMeText.style.display = 'block'; 
     }
-    
 
     pets.forEach(pet => {
         const petDiv = document.createElement('div');
@@ -66,4 +68,40 @@ function displayPets(pets) {
         petDiv.innerHTML = petContent;
         listings.appendChild(petDiv);
     });
+
 }
+    // Function to animate the images in the adoption section
+    function animateAdoptionSection() {
+
+        // Animates the cat image
+        Velocity(document.getElementById('cat-image'), { 
+            left: '10%', 
+            opacity: 1 
+        }, { 
+            duration: 1000,
+            loop: true, 
+        });
+        
+        // Animates the dog image
+        Velocity(document.getElementById('dog-image'), { 
+            right: '10%', 
+            opacity: 1 
+        }, { 
+            duration: 1000,
+            loop: true, 
+        });
+        
+        // Animates the adopt us! text
+        Velocity(document.getElementById('adopt-me-text'), { 
+            opacity: 1, 
+            scale: [1, 0.8]
+        }, { 
+            duration: 1000,
+            loop: true,
+            easing: "easeInOutSine" 
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        animateAdoptionSection();
+    });
