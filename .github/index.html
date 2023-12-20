@@ -1,154 +1,307 @@
 <html>
+
 <head>
+
     <title>Pet Adoption Portal</title>
 
+
+
     <!--  Velocity.js library for animations -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.min.js"></script>
 
+
+
     <style>
+
     
+
         header {
+
             background-color: #00e4c9;
+
             padding: 10px 0;
+
             text-align: center;
+
         }
+
+
 
         body {
+
             margin: 0;
+
             padding-bottom: 200px; 
+
             background: url('https://static.vecteezy.com/system/resources/previews/015/449/992/original/adopt-a-pet-from-an-animal-shelter-in-the-form-of-cats-or-dogs-to-care-for-and-look-after-in-flat-cartoon-hand-drawn-templates-illustration-vector.jpg') no-repeat center center;
+
             background-size:auto;
+
             min-height: 100vh;
+
             background-position: center 50px;
+
         }
+
          
+
         .results-present {
+
             background-image: none; 
+
         }
+
+
 
         main {
+
             flex: 1;
+
         }
+
       
+
         footer {
+
             position: absolute; 
+
             bottom: 0;
+
             width: 100%;
+
             text-align: center;
+
         }
+
+
 
         nav ul {
+
             list-style: none;
+
             padding: 0;
+
         }
+
+
 
         nav ul li {
+
             display: inline;
+
             margin: 0 10px;
+
         }
+
+
 
         #search-section {
+
             text-align: center;
+
             margin: 20px 0;
+
         }
+
         
+
         #search-bar {
+
             min-width: 200px; 
+
         }
+
+
 
         #cat-image {
+
             width: 600px; 
+
             height: auto;   
+
         }
+
+
 
         #adopt-me-text {
+
             font-size: 40px; 
+
             color:rgb(241, 91, 221); 
+
             top: 185px;
+
         }
+
+
 
         #pet-listings {
+
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
         }
+
+
 
         .pet-item {
+
             border: 1px solid #ddd;
+
             margin: 10px;
+
             padding: 10px;
+
             width: 200px;
+
         }
+
         .pet-item img {
+
             width: 200px; 
+
             height: 200px; 
+
             object-fit: cover; 
+
             display: block;
+
             margin: 0 auto;
+
         }
+
+
 
         input[type="text"], select, input[type="number"] {
+
             font-size: 13px; 
+
             padding: 10px; 
+
             height: 50px; 
+
         }
+
  
+
         button {
+
             font-size: 16px; 
+
             padding: 10px 20px;
+
             height: 50px; 
+
             cursor: pointer; 
+
         }
+
+
 
     </style>
+
     <script src="script.js" defer></script>
+
 </head>
+
 <body>
 
+
+
     <!-- Header section of the page -->
+
     <header>
+
         <h1>Welcome to the Pet Adoption Portal</h1>
+
         <!-- Navigation menu -->
+
         <nav>
+
             <ul>
+
                 <li><a href="index.html">Home</a></li>
+
                 <li><a href="about.html">About</a></li>
-                <li><a href="help.html">Help</a></li>
+
+                <li><a href="documentation.html">Documentation</a></li>
+
             </ul>
+
         </nav>
+
     </header>
 
+
+
     <main>
+
         <!-- Search section with inputs and button -->
+
         <section id="search-section">
+
             <input type="text" id="search-bar" placeholder="Enter location (e.g., ZIP code)">
+
             <select id="animal-type">
+
                 <option value="dog">Dog</option>
+
                 <option value="cat">Cat</option>
+
                
+
             </select>
+
             <input type="number" id="distance" placeholder="Distance (miles)">
+
             <button id="search-button">Search</button>
+
         </section>
+
+
 
         <!-- Section where pet listings will be displayed -->
+
         <section id="pet-listings">
+
             
+
         </section>
 
+
+
         <!-- Adoption section with images and text -->
+
         <div id="adoption-section">
+
             <img id="cat-image" src="https://cdn.svgator.com/images/2022/07/cute-animated-cat-tutorial.gif" alt="Cat" style="position: absolute; left: -100%; opacity: 0;"/>
+
             <img id="dog-image" src="https://t4.ftcdn.net/jpg/00/54/29/87/360_F_54298748_etA86UVOxgOEyDgs8yu8TDo9EnatjVDE.jpg" alt="Dog" style="position: absolute; right: -100%; opacity: 0;"/>
+
             <h2 id="adopt-me-text" style="position: absolute; width: 100%; text-align: center; opacity: 1;">Adopt Us!</h2>
+
         </div>
+
+
 
     </main>
 
+
+
     <footer>
+
         <p>Pet Adoption Portal</p>
+
     </footer>
 
+
+
     <script src="script.js"></script>
+
 </body>
+
 </html>
