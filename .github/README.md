@@ -34,4 +34,10 @@ API Integration
     -searchPets: Constructs API URL and fetches pet data.
     -displayPets: Renders pet information dynamically in the #pet-listings section.
 
+APP commands
+-npm init: initializes a project and creates the package.json file
+-npm install express: adds the modules to the dependencies liest on package.json file
+-npm install nodemon: monitors project directory and restarts app when it notices a change
+-npm install @supabse/supabase-js: interacts with the database
+-npm start: runs a predefined command specified in the package scripts
 -There Comments within the code for clarity.
